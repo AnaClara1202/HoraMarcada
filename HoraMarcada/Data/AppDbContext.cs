@@ -11,6 +11,13 @@ namespace HoraMarcada.Data
 
         // Essa é a tabela que nascerá no MySQL
         public DbSet<Agendamento> Agendamentos { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Filiado> Filiados { get; set; }
+
+
+
     }
 }
 

@@ -1,4 +1,4 @@
-namespace SeuProjeto.Models
+namespace HoraMarcada.Models
 {
     public class Contato
     {
