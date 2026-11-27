@@ -115,7 +115,13 @@ namespace HoraMarcada.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId")
+                        .IsUnique();
 
                     b.ToTable("Pessoas");
                 });
@@ -144,6 +150,22 @@ namespace HoraMarcada.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("HoraMarcada.Models.Pessoa", b =>
+                {
+                    b.HasOne("HoraMarcada.Models.Usuario", "Usuario")
+                        .WithOne("Pessoa")
+                        .HasForeignKey("HoraMarcada.Models.Pessoa", "UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("HoraMarcada.Models.Usuario", b =>
+                {
+                    b.Navigation("Pessoa");
                 });
 #pragma warning restore 612, 618
         }

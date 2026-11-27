@@ -6,4 +6,6 @@ public class Pessoa
     public string Sobrenome { get; set; }
     public string CPF { get; set; }
     public DateTime DataNascimento { get; set; }
+    public int UsuarioId { get; set; }
+    public Usuario Usuario { get; set; }
 }

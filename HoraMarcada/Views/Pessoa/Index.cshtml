@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HoraMarcada.Models.Pessoa>
+<h1>Lista de Pessoa</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>CPF</th>
+            <th>DataNascimento</th>
+            <th>E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Sobrenome</td>
+                <td>@item.CPF</td>
+                <td>@item.DataNascimento</td>
+                <td>@item.Usuario.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
