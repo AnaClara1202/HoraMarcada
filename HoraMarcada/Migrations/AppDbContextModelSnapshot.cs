@@ -132,8 +132,8 @@ namespace HoraMarcada.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("DataCriacao")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .IsRequired()
