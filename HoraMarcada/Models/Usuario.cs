@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Primitives;
+﻿using System;
+using Microsoft.Extensions.Primitives;
 using System.Net.Mail;
 
 namespace HoraMarcada.Models
@@ -8,8 +9,10 @@ namespace HoraMarcada.Models
         public int Id { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public int DataCriacao { get; set; }
+        public DateTime DataCriacao { get; set; }
         public string Status { get; set; }
+
+        public Pessoa? Pessoa { get; set; }
 
     }
 }
